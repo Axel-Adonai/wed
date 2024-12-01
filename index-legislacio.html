@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDO</title>
+    <style>
+        body {
+            background-color: #D3AB9E;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* Estilo para el título en la parte superior */
+        h1 {
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        /* Estilo para el subtítulo */
+        h2 {
+            color: white;
+            font-size: 1.8em;
+            text-align: center;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        /* Logo en la esquina izquierda */
+        .logo-izquierda {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: auto;
+        }
+
+        /* Logo en la esquina derecha */
+        .logo-derecha {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 150px;
+            height: auto;
+        }
+
+        /* Estilo para el menú */
+        nav {
+            background-color: #7C5D56; /* Color del menú */
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #B78A82; /* Color al pasar el mouse */
+        }
+
+        /* Sección de contenido */
+        .contenido {
+            padding: 20px;
+            text-align: center;
+            color: #4D403B;
+        }
+
+        /* Ocultar todas las secciones inicialmente */
+        .seccion {
+            display: none;
+        }
+
+        /* Mostrar la sección activa */
+        .activo {
+            display: block;
+        }
+    </style>
+    <script>
+        function mostrarSeccion(id) {
+            // Oculta todas las secciones
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('activo'));
+
+            // Muestra la sección seleccionada
+            const seccionActiva = document.getElementById(id);
+            seccionActiva.classList.add('activo');
+        }
+    </script>
+</head>
+<body>
+    <!-- Título principal -->
+    <h1>¡TECNOLOGICO DE ESTUDIOS SUPERIORES IXTAPALUCA!</h1>
+
+    <!-- Logo izquierdo -->
+    <img class="logo-izquierda" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLKpksW9yYNrOMc_c92GaW6EPsSzgwyVcLk0Y_wysFVFoOVM6tw2XnSI-nR0k8OKxcbg&usqp=CAU" alt="Logo izquierdo">
+
+    <!-- Logo derecho -->
+    <img class="logo-derecha" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Hax22jkR4ifJnQo-EgALPC2c_6VfrorZrrflwZEr59IiIaBz9OiOZ7OWsnN217yuD9A&usqp=CAU" alt="Logo derecho">
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#" onclick="mostrarSeccion('creadores')">Creadores</a>
+        <a href="#" onclick="mostrarSeccion('indice')">Índice</a>
+        <a href="#" onclick="mostrarSeccion('videos')">Videos</a>
+    </nav>
+
+    <!-- Sección Creadores -->
+    <div id="creadores" class="seccion contenido">
+        <h2>Creadores</h2>
+        <ul>
+            <li>SUAREZ MEDINA JESUS NATANIEL</li>
+            <li>HERNANDEZ GUADARRAMA ALAN URIEL</li>
+            <li>FERNANDO MARCO FLORES</li>
+            <li>TOLENTINO DELGADO AXEL ADONAI</li>
+        </ul>
+    </div>
+
+    <!-- Sección Índice -->
+    <div id="indice" class="seccion contenido">
+        <h2>Índice (Temas de la Asignatura)</h2>
+        <ul>
+            <li>Introducción a la Legislación Informática</li>
+            <li>Protección de Datos</li>
+            <li>Derechos de Autor</li>
+            <li>Delitos Cibernéticos</li>
+        </ul>
+    </div>
+
+    <!-- Sección Videos -->
+    <div id="videos" class="seccion contenido">
+        <h2>Videos de Estudiantes</h2>
+        <p>Pronto se añadirán videos realizados por los estudiantes.</p>
+    </div>
+
+    <!-- Subtítulo centrado en la parte inferior -->
+    <h2>TALLER DE LEGISLACION PARA INFORMATICA</h2>
+
+    <a href="index-legislacio.html">enlace-de-pagina</a>
+</body>
+</html>
